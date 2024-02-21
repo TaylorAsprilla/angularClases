@@ -1,0 +1,54 @@
+<div class="container mt-3 p-4 mb-5">
+  <form [formGroup]="clienteForm" (submit)="crearCliente()">
+    <label for="id">Id:</label>
+    <input
+      type="number"
+      formControlName="id"
+      placeholder="Ingrese el Id del Cliente"
+    />
+
+    <label for="Nombre">Nombre:</label>
+    <input
+      type="text"
+      formControlName="nombre"
+      placeholder="Ingrese el nombre"
+    />
+
+    <label for="direccion">Dirección:</label>
+    <input
+      type="text"
+      formControlName="direccion"
+      placeholder="Ingrese la direccion"
+    />
+
+    <label for="telefono">Telefono:</label>
+    <input
+      type="text"
+      formControlName="telefono"
+      placeholder="Ingrese el telefono"
+    />
+
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Ingrese el email del cliente"
+    />
+
+    <label for="Nombre">Tipo de Documento:</label>
+    <input
+      type="text"
+      formControlName="tipoDocumento"
+      placeholder="Ingrese el tipo de documento"
+    />
+
+    <label for="numeroDocumento">Numero de Documento:</label>
+    <input
+      type="text"
+      formControlName="numeroDocumento"
+      placeholder="Ingrese el Numero Documento"
+    />
+
+    <button type="submit">Crear Cliente</button>
+  </form>
+</div>

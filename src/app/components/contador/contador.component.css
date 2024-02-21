@@ -1,0 +1,19 @@
+.title {
+  font-size: 18 px;
+  color: #784545;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  overflow: hidden;
+}
+
+.conteIncrement {
+  padding: 4px;
+  margin: 4px;
+  border-radius: 2em;
+  border: 2px solid black;
+}
+
+.contenedorPrincipal {
+  background-color: #333333;
+}
