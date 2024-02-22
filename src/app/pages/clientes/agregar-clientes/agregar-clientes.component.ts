@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormControl,  FormGroup, ReactiveFormsModule,  Validators,} from '@angular/forms';
 
 @Component({
   selector: 'app-agregar-clientes',
@@ -25,6 +20,7 @@ export class AgregarClientesComponent {
   });
 
   crearCliente() {
-    console.log('datos', this.clienteForm.value);
+    console.log('datos', this.clienteForm.value.id);
+    console.log('datos', this.clienteForm.value.nombre);
   }
 }
