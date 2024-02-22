@@ -1,0 +1,6 @@
+.content {
+    background-image: linear-gradient(to top, red, yellow);
+    text-align: center;
+    color: white;
+    padding: 5rem;
+  }
