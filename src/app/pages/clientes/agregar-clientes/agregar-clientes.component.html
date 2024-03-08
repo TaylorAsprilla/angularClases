@@ -1,12 +1,6 @@
 <div class="container mt-3 p-4 mb-5">
+  <h1 class="text-center">Crear Un cliente</h1>
   <form [formGroup]="clienteForm" (submit)="crearCliente()">
-    <label for="id">Id:</label>
-    <input
-      type="number"
-      formControlName="id"
-      placeholder="Ingrese el Id del Cliente"
-    />
-
     <label for="Nombre">Nombre:</label>
     <input
       type="text"
@@ -49,6 +43,10 @@
       placeholder="Ingrese el Numero Documento"
     />
 
-    <button type="submit">Crear Cliente</button>
+    <button class="btn btn-primary" type="submit">Crear Cliente</button>
+
+    <button class="btn btn-danger" type="button">
+      <a routerLink="./../clientes"> Cancelar</a>
+    </button>
   </form>
 </div>

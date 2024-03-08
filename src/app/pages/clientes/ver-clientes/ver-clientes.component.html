@@ -1,8 +1,11 @@
 <div class="container m-4 p-3">
+  <button class="btn btn-primary" (click)="agregarCliente()">
+    Crear Clientes
+  </button>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">Id</th>
+        <th scope="col">Item</th>
         <th>Nombre</th>
         <th>Dirección</th>
         <th>Telefóno</th>
@@ -16,7 +19,7 @@
     <tbody>
       @for (cliente of misClientes; track $index) {
       <tr>
-        <td scope="col">{{ cliente.id }}</td>
+        <td scope="col">{{ $index }}</td>
         <td>{{ cliente.nombre }}</td>
         <td>{{ cliente.direccion }}</td>
         <td>{{ cliente.telefono }}</td>
@@ -44,7 +47,7 @@
           >
           <a
             class="btn btn-outline-danger btn-sm m-1"
-            (click)="eliminarCliente(cliente.id)"
+            (click)="eliminarCliente(cliente._id)"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
