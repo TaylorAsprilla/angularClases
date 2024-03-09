@@ -5,6 +5,7 @@ import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { VerClientesComponent } from './pages/clientes/ver-clientes/ver-clientes.component';
 import { AgregarClientesComponent } from './pages/clientes/agregar-clientes/agregar-clientes.component';
+import { AutenticacionComponent } from './auth/autenticacion/autenticacion.component';
 
 export const routes: Routes = [
   {
@@ -36,5 +37,10 @@ export const routes: Routes = [
     path: 'add-clientes',
     title: 'Agregar Clientes',
     component: AgregarClientesComponent,
+  },
+  {
+    path: 'login',
+    title: 'Agregar Clientes',
+    component: AutenticacionComponent,
   },
 ];
