@@ -7,12 +7,13 @@ import {
 } from '@angular/forms';
 import { AutenticacionService } from '../../services/autenticacion/autenticacion.service';
 import Swal from 'sweetalert2';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { ROUTER_APP } from '../../core/enum/router-app.enum';
 
 @Component({
   selector: 'app-autenticacion',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterOutlet],
   templateUrl: './autenticacion.component.html',
   styleUrl: './autenticacion.component.css',
 })
@@ -55,7 +56,7 @@ export class AutenticacionComponent implements OnInit {
           Swal.fire({
             html: `Bienvenido ${nombre}`,
           }).then(() => {
-            this.router.navigateByUrl('clientes');
+            this.router.navigateByUrl(ROUTER_APP.CLIENTES);
           });
         }
       },
