@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../../../core/interfaces/cliente';
 import { ClientesService } from '../../../services/clientes/clientes.service';
 import { Router } from '@angular/router';
+import { ROUTER_APP } from '../../../core/enum/router-app.enum';
+import { PermisosDirective } from '../../../core/directives/permisos/permisos.directive';
 
 @Component({
   selector: 'app-ver-clientes',
   standalone: true,
-  imports: [],
+  imports: [PermisosDirective],
   templateUrl: './ver-clientes.component.html',
   styleUrl: './ver-clientes.component.css',
 })
@@ -34,6 +36,6 @@ export class VerClientesComponent implements OnInit {
   }
 
   agregarCliente() {
-    this.router.navigateByUrl('add-clientes');
+    this.router.navigateByUrl(ROUTER_APP.ADD_CLIENTES);
   }
 }

@@ -1,4 +1,4 @@
-<div class="container m-4 p-3">
+<ng-template class="container m-4 p-3" [appPermisos]="['ADMIN']">
   <button class="btn btn-primary" (click)="agregarCliente()">
     Crear Clientes
   </button>
@@ -86,4 +86,4 @@
       }
     </tbody>
   </table>
-</div>
+</ng-template>

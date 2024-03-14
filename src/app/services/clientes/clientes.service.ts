@@ -11,11 +11,23 @@ const base_url = environment.base_url;
 export class ClientesService {
   constructor(private httpClient: HttpClient) {}
 
+  get token(): string {
+    return localStorage.getItem('token') || '';
+  }
+
+  get headers() {
+    return {
+      headers: {
+        'x-token': this.token,
+      },
+    };
+  }
+
   getClientes() {
-    return this.httpClient.get(`${base_url}/cliente`);
+    return this.httpClient.get(`${base_url}/cliente`, this.headers);
   }
 
   crearClientes(cliente: ClienteModel) {
-    return this.httpClient.post(`${base_url}/cliente`, cliente);
+    return this.httpClient.post(`${base_url}/cliente`, cliente, this.headers);
   }
 }
