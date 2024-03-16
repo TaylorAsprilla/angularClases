@@ -4,11 +4,16 @@
   </div>
   <nav class="navbar">
     <ul>
-      <li><a [routerLink]="ROUTER_APP.INICIO">Inicio</a></li>
+      <li *appPermisos="['USER']">
+        <a [routerLink]="ROUTER_APP.INICIO">Inicio</a>
+      </li>
       <li><a [routerLink]="ROUTER_APP.CLIENTES">Clientes</a></li>
+      <li><a [routerLink]="ROUTER_APP.USUARIOS">Usuarios</a></li>
       <li><a [routerLink]="ROUTER_APP.SERVICIO">Servicios</a></li>
       <li><a [routerLink]="ROUTER_APP.ACERCA_DE">Acerca de</a></li>
-      <li><a [routerLink]="ROUTER_APP.CONTACTO">Contacto</a></li>
+      <li *appPermisos="['USER']">
+        <a [routerLink]="ROUTER_APP.CONTACTO">Contacto</a>
+      </li>
       <li (click)="cerrarSesion()" class="btn btn-outline-danger btn-sm">
         Cerrar Sesión
       </li>

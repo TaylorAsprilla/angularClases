@@ -2,13 +2,14 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ROUTER_APP } from '../../core/enum/router-app.enum';
 import { AutenticacionService } from '../../services/autenticacion/autenticacion.service';
+import { PermisosDirective } from '../../core/directives/permisos/permisos.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  imports: [RouterLink],
+  imports: [RouterLink, PermisosDirective],
 })
 export class HeaderComponent {
   contador: number = 0;
