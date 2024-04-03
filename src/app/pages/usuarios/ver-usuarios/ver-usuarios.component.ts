@@ -71,6 +71,10 @@ export class VerUsuariosComponent implements OnInit, OnDestroy {
   }
 
   agregarUsuarios() {
-    this.router.navigateByUrl(ROUTER_APP.AGREGAR_USUARIOS);
+    this.router.navigateByUrl(`${ROUTER_APP.AGREGAR_USUARIOS}/nuevo`);
+  }
+
+  editarUsuarios(id: string) {
+    this.router.navigateByUrl(`${ROUTER_APP.AGREGAR_USUARIOS}/${id}`);
   }
 }

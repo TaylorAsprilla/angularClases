@@ -36,7 +36,10 @@
           </td>
           <td>{{ usuario.estado }}</td>
           <td>
-            <a class="btn btn-outline-success btn-sm m-1">
+            <a
+              class="btn btn-outline-success btn-sm m-1"
+              (click)="editarUsuarios(usuario._id)"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
